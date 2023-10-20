@@ -52,7 +52,7 @@ sed -i "s/\(\$cfg\['blowfish_secret'\] =\).*/\1 '$RANDOM_VALUE';/" /var/www/html
 mkdir -p /var/www/html/phpmyadmin/tmp/
 
 #actualizamos los permisos del directorio /var/www/html
-chown -R apache:apache /var/www/html
+chown -R apache:apache /var/www/html 
 
 # eliminamos si existe alguna base de datos previa de phpmyadmin
 mysql -u root <<< "DROP DATABASE IF EXISTS phpmyadmin"
